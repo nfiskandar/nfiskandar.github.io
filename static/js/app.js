@@ -115,8 +115,8 @@ function BuildPlots(filterID){
             value: freq,
             title: { text: "Washing Frequency" },
             type: "indicator",
-            mode: "gauge+number"
-            //gauge: { axis: { range: [null, 9] } }
+            mode: "gauge+number",
+            gauge: { axis: { range: [null, 9] }  }
         };
       var Gaugedata = [trace3];
   
@@ -139,7 +139,7 @@ init();
 
 // Part 5: Handling the change when different Test Subject ID is selected
 //---------------------------------------------------------------------------
-// Recognizing the change on Test Subject ID
+// Recognizing the change on Test Subject ID and run optionChanged function
 d3.select("#selDataset").on("change", optionChanged);
 
 // Definiting optionChanged function to generate new plot when different filterID selected
